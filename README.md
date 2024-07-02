@@ -39,7 +39,7 @@ $ A \cap B$
 
 
 ```python
-ans1 = None
+ans1 = {8}
 ans1
 ```
 
@@ -47,7 +47,7 @@ $ A \cup C$
 
 
 ```python
-ans2 = None
+ans2 = {2,3,4,6,8,9,10,11}
 ans2
 ```
 
@@ -55,15 +55,16 @@ $A^c$
 
 
 ```python
-ans3 = None
+ans3 =  {1,3,5,7,9,11,12}
 ans3
+
 ```
 
 The absolute complement of B
 
 
 ```python
-ans4 = None
+ans4 ={1,2,4,5,6,7,9,10} 
 ans4
 ```
 
@@ -71,7 +72,7 @@ $(A \cup B)^c$
 
 
 ```python
-ans5 = None
+ans5 = {1,5,7,9}
 ans5
 ```
 
@@ -79,7 +80,7 @@ $B \cap C'$
 
 
 ```python
-ans6 = None
+ans6 = {12}
 ans6
 ```
 
@@ -87,7 +88,7 @@ $A\backslash B$
 
 
 ```python
-ans7 = None
+ans7 = {2,4,6,10}
 ans7
 ```
 
@@ -95,7 +96,7 @@ $C \backslash (B \backslash A)$
 
 
 ```python
-ans8 = None
+ans8 = {2,6,8,9}
 ans8
 ```
 
@@ -103,7 +104,7 @@ $(C \cap A) \cup (C \backslash B)$
 
 
 ```python
-ans9 = None
+ans9 = {2,6,8,9}
 ans9
 ```
 
@@ -115,28 +116,28 @@ ans9
 
 ```python
 # Create set A
-A = None
+A = {2,4,6,8,10}
 f'Type A: {type(A)}, A: {A}' # "Type A: <class 'set'>, A: {2, 4, 6, 8, 10}"
 ```
 
 
 ```python
 # Create set B
-B = None
+B = {3,8,11,12}
 f'Type B: {type(B)}, A: {B}' # "Type B: <class 'set'>, B: {8, 11, 3, 12}"
 ```
 
 
 ```python
 # Create set C
-C = None
-f'Type C: {type(C)}, A: {C}' # "Type C: <class 'set'>, C: {2, 3, 6, 8, 9, 11}"
+C = {2,3,6,8,9,11}
+f'Type c: {type(C)}, A: {C}' # "Type C: <class 'set'>, C: {2, 3, 6, 8, 9, 11}"
 ```
 
 
 ```python
 # Create universal set U
-U = None
+U ={1,2,3,4,5,6,7,8,9,10,11,12} 
 f'Type U: {type(U)}, A: {U}' # "Type U: <class 'set'>, U: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}"
 ```
 
@@ -159,7 +160,7 @@ Every cell should display `True` if your original answer matches the answer you 
 
 
 ```python
-A_inters_B = None
+A_inters_B = A&B
 A_inters_B == ans1
 ```
 
@@ -167,7 +168,7 @@ A_inters_B == ans1
 
 
 ```python
-A_union_C = None
+A_union_C = A|C
 A_union_C == ans2
 ```
 
@@ -175,7 +176,7 @@ A_union_C == ans2
 
 
 ```python
-A_comp = None
+A_comp = U.difference(A)
 A_comp == ans3
 ```
 
@@ -183,7 +184,7 @@ A_comp == ans3
 
 
 ```python
-B_comp = None
+B_comp = U.difference(B)
 B_comp == ans4
 ```
 
@@ -191,7 +192,9 @@ B_comp == ans4
 
 
 ```python
-A_union_B_comp = None
+A_union_B_comp=U - (A | B) 
+
+
 A_union_B_comp == ans5
 ```
 
